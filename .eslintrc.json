@@ -1,3 +1,6 @@
 {
-  "extends": ["@jokeyrhyme/es5"]
+  "extends": ["@jokeyrhyme/es5"],
+  "rules": {
+    "no-param-reassign": 0
+  }
 }

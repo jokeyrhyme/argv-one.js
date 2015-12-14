@@ -1,3 +1,4 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
-require('..');
+console.log(require('..')({ args: process.argv }));

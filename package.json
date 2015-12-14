@@ -9,6 +9,11 @@
   "bugs": {
     "url": "https://github.com/jokeyrhyme/argv-one.js/issues"
   },
+  "dependencies": {
+    "pkg-up": "^1.0.0",
+    "read-pkg": "^1.1.0",
+    "read-pkg-up": "^1.0.1"
+  },
   "devDependencies": {
     "@jokeyrhyme/eslint-config-es5": "^1.0.0",
     "ava": "^0.7.0",
