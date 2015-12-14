@@ -26,3 +26,21 @@ test('unresolved process.argv[1] returned as-is', function (t) {
     t.is(result, arg);
   });
 });
+
+test('npm install -g (Windows) returns "argv-one"', function (t) {
+  var result = argvOne({
+    argv: ['node', 'C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\argv-one\\bin\\index.js'],
+    pkg: pkg,
+    pkgPath: 'C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\argv-one\\package.json'
+  });
+  t.is(result, 'argv-one');
+});
+
+test('npm install -g (*nix) returns "argv-one"', function (t) {
+  var result = argvOne({
+    argv: ['node', 'argv-one'],
+    pkg: pkg,
+    pkgPath: pkgPath
+  });
+  t.is(result, 'argv-one');
+});
