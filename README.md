@@ -50,3 +50,7 @@ console.log(cmd);
 ## API
 
 ### argvOne({ argv?: String[], pkg?: Object, pkgPath?: String }) => String
+
+If there is nothing wrong with your CLIs package.json or arguments,
+but `process.argv[1]` could not be reduced to the executable's base name,
+then `proecess.argv[1]` is returned as-is.

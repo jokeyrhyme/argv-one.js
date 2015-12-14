@@ -49,5 +49,5 @@ module.exports = function argvOneSync (opts) {
     }
   }
 
-  throw new Error('unable to resolve `process.argv[1]`');
+  return cmd;
 };
