@@ -36,6 +36,11 @@ module.exports = function argvOneSync (opts) {
   }
 
   pkgPath = opts.pkgPath || pkgUp.sync(cmd);
+
+  if (!pkgPath) {
+    return cmd;
+  }
+
   pkg = opts.pkg || readPkg.sync(pkgPath);
 
   assertPkg(pkg);
