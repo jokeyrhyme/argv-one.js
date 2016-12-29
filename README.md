@@ -1,4 +1,4 @@
-# argv-one
+# argv-one [![AppVeyor Status](https://img.shields.io/appveyor/ci/jokeyrhyme/argv-one-js/master.svg)](https://ci.appveyor.com/project/jokeyrhyme/argv-one-js) [![Travis CI Status](https://travis-ci.org/jokeyrhyme/argv-one.js.svg?branch=master)](https://travis-ci.org/jokeyrhyme/argv-one.js)
 
 cross-platform helper for `process.argv[1]`
 

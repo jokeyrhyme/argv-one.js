@@ -1,19 +1,19 @@
-'use strict';
+'use strict'
 
-var os = require('os');
+var os = require('os')
 
-var pkgUp = require('pkg-up');
-var readPkg = require('read-pkg');
-var test = require('ava');
+var pkgUp = require('pkg-up')
+var readPkg = require('read-pkg')
+var test = require('ava')
 
-var argvOne = require('..');
+var argvOne = require('..')
 
-var pkgPath = pkgUp.sync(__dirname);
-var pkg = readPkg.sync(pkgPath);
+var pkgPath = pkgUp.sync(__dirname)
+var pkg = readPkg.sync(pkgPath)
 
 test('exports a function', function (t) {
-  t.is(typeof argvOne, 'function');
-});
+  t.is(typeof argvOne, 'function')
+})
 
 test('unresolved process.argv[1] returned as-is', function (t) {
   [
@@ -24,10 +24,10 @@ test('unresolved process.argv[1] returned as-is', function (t) {
       argv: ['node', arg],
       pkg: pkg,
       pkgPath: pkgPath
-    });
-    t.is(result, arg);
-  });
-});
+    })
+    t.is(result, arg)
+  })
+})
 
 if (os.type().indexOf('Windows') === 0) {
   test('npm install -g (Windows) returns "argv-one"', function (t) {
@@ -35,9 +35,9 @@ if (os.type().indexOf('Windows') === 0) {
       argv: ['node', 'C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\argv-one\\bin\\index.js'],
       pkg: pkg,
       pkgPath: 'C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\argv-one\\package.json'
-    });
-    t.is(result, 'argv-one');
-  });
+    })
+    t.is(result, 'argv-one')
+  })
 }
 
 test('npm install -g (*nix) returns "argv-one"', function (t) {
@@ -45,6 +45,6 @@ test('npm install -g (*nix) returns "argv-one"', function (t) {
     argv: ['node', 'argv-one'],
     pkg: pkg,
     pkgPath: pkgPath
-  });
-  t.is(result, 'argv-one');
-});
+  })
+  t.is(result, 'argv-one')
+})
