@@ -1,6 +1,13 @@
 {
-  "extends": ["@jokeyrhyme/es5"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "standard"
+  ],
   "rules": {
     "no-param-reassign": 0
-  }
+  },
+  "plugins": [
+    "node"
+  ]
 }
