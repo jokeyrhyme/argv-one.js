@@ -14,16 +14,15 @@
     "read-pkg": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^0.18.0",
-    "eslint": "^3.12.2",
+    "ava": "^0.19.0",
+    "eslint": "^3.19.0",
     "eslint-config-semistandard": "^8.0.0",
-    "eslint-config-standard": "^7.0.2",
-    "eslint-plugin-node": "^4.0.0",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "fixpack": "^2.2.0",
-    "flow-bin": "^0.43.0",
-    "npm-run-all": "^4.0.0"
+    "eslint-config-standard": "^10.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "fixpack": "^2.3.0"
   },
   "directories": {
     "test": "test"
@@ -54,8 +53,8 @@
     "ava": "ava",
     "eslint": "eslint --fix --cache .",
     "fixpack": "fixpack",
-    "flow_check": "flow check",
-    "posttest": "npm-run-all eslint flow_check fixpack",
-    "test": "ava"
+    "posttest": "npm run eslint",
+    "pretest": "npm run fixpack",
+    "test": "npm run ava"
   }
 }
