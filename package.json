@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "pkg-up": "^2.0.0",
-    "read-pkg": "^3.0.0"
+    "read-pkg": "^4.0.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
