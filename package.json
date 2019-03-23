@@ -10,7 +10,7 @@
     "url": "https://github.com/jokeyrhyme/argv-one.js/issues"
   },
   "dependencies": {
-    "pkg-up": "^2.0.0",
+    "pkg-up": "^3.0.1",
     "read-pkg": "^3.0.0"
   },
   "devDependencies": {
